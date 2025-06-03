@@ -164,7 +164,7 @@ def get_diff(article_1: Article, article_2: Article) -> Tuple[bool, Table]:
             index_2 += 1
 
     while index_2 < len(article_2.texts):
-        if b().color == "0":
+        if b().style.color == "0":
             table.add_row("", format_text(b(), style="yellow", is_color_all=True))
         else:
             table.add_row("", format_text(b(), style="red bold", is_color_all=False))
@@ -172,7 +172,7 @@ def get_diff(article_1: Article, article_2: Article) -> Tuple[bool, Table]:
         index_2 += 1
 
     while index_1 < len(article_1.texts):
-        if a().color == "0":
+        if a().style.color == "0":
             table.add_row(format_text(a(), style="yellow", is_color_all=True), "")
         else:
             table.add_row(format_text(a(), style="red bold", is_color_all=False), "")
